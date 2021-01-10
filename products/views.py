@@ -32,6 +32,7 @@ def all_products(request):
                 direction = request.GET['direction']
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'  # '-' reverses the order
+
             products = products.order_by(sortkey)
 
         if 'category' in request.GET:
